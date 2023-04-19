@@ -22,7 +22,9 @@ export const ContextProvider = ({ children }) => {
           method: 'GET',
           withCredentials: true,
           headers: {
-            'x-api-key': process.env.REACT_APP_KEY,
+            'x-api-key': process.env.REACT_APP_KEY
+              ? process.env.REACT_APP_KEY
+              : 'woope1Pei5zieg',
             'Content-Type': 'application/json',
           },
         })
